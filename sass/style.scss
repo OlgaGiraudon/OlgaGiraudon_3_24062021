@@ -13,6 +13,30 @@ body
     text-align: center;
     width: 100%;
 }
+/*mixin Réservez le menu*/
+@mixin reserv
+{
+    width: 60%;
+    flex-wrap: wrap;
+    font-family: $main-font;
+    text-align: center;
+}
+/*mixin button*/
+@mixin button
+{
+    width: 230px;
+    height: 45px;
+    border-radius: 25px;
+    background: linear-gradient(to top left, $primary-color, $secondary-color);
+    color: white;
+    font-family: $main-font;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    box-shadow: 2px 1px 7px grey;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
 /*Logo main page*/
 .logo_main
 {
@@ -58,20 +82,66 @@ body
 {
     height: 45px;
     width: 100%;
-    background-color: #f2f2f2;
+    background-color: #ecebeb;
     margin-top: 3px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+.text_geo
+{
     font-family: $main-font;
-    font-weight: 900;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 20px;
 }
 .fa-map-marker-alt
 {
     margin-right: 10px;
 }
+/*Reservation + button*/
+.reserv
+{
+    height: 230px;
+    width: 100%;
+    background-color: #f6f3f3;
+    display: flex;
+    flex-direction: column;
+    @media screen and(max-width: 768px)
+    {
+        height: 280px;
+    }
+    @media screen and(max-width: 480px)
+    {
+        height: 300px;
+    }
+    @media screen and(max-width: 768px)
+    {
+        height: 340px;
+    }
+
+}
+.reserv_title
+{
+    margin: 0% auto;
+    padding-top: 40px;
+    @include reserv;
+}
+.reserv_text
+{    @include reserv;
+     margin: 20px auto;
+}
+.button_rose
+{
+    @include button;
+    margin: 25px auto ;
+}
+.button_rose:hover
+{
+    background: linear-gradient(to top left, #df96ca, $secondary-color);
+    box-shadow: 3px 3px 10px rgb(116, 115, 115);
+}
+
 
 
 
