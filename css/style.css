@@ -46,16 +46,6 @@ body {
   color: black;
 }
 
-.fa-arrow-left {
-  position: relative;
-  left: 100px;
-  top: 25px;
-  width: 30px;
-  border: 1px solid blue;
-  font-weight: bolder;
-  color: black;
-}
-
 /*Geolocalisation*/
 .geo {
   height: 45px;
@@ -99,9 +89,21 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 320px) {
   .reserv {
-    height: 340px;
+    height: 330px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .reserv {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 256px) {
+  .reserv {
+    height: 380px;
   }
 }
 
@@ -141,4 +143,117 @@ body {
 .button_rose:hover {
   background: linear-gradient(to top left, #df96ca, #FF79DA);
   box-shadow: 3px 3px 10px #747373;
+}
+
+/*Fonctionnement*/
+.fonctionnement_main {
+  width: 95%;
+  margin: 10px auto;
+  font-family: "Roboto", sans-serif;
+}
+
+.fonctionnement_body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+  .fonctionnement_body {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .fonctionnement_main h2 {
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .fonctionnement_main h2 {
+    margin-left: 7px;
+  }
+}
+
+.choose {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 30%;
+  position: relative;
+  background-color: #f2f2f2;
+  border-radius: 25px;
+  height: 70px;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+  box-shadow: 1px 2px 7px #cecece;
+}
+
+@media screen and (max-width: 1024px) {
+  .choose {
+    width: 90%;
+    margin-left: 15px;
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .choose {
+    margin-left: 20px;
+    width: 91%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .choose {
+    width: 90%;
+  }
+}
+
+.choose:hover {
+  background-color: #e4d5f6;
+}
+
+.violet_number {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  line-height: 25px;
+  background-color: #9356DC;
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: -12px;
+  top: 23px;
+  z-index: 2;
+}
+
+.fonctionnement_icone {
+  position: absolute;
+  left: 25px;
+  top: 23px;
+  font-size: 20px;
+  color: grey;
+}
+
+.fonctionnement_texte {
+  position: absolute;
+  left: 65px;
+  top: 8px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 300px) {
+  .fonctionnement_texte {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 267px) {
+  .fonctionnement_texte {
+    font-size: 15px;
+    top: 1px;
+  }
 }
