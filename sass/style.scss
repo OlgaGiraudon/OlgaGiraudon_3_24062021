@@ -37,6 +37,16 @@ body
     box-shadow: 2px 1px 7px grey;
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
+@mixin layout
+{
+    width:95%;
+    margin: 10px auto;
+    font-family: $main-font;
+}
+@mixin heart
+{
+    transition: background-color 1s ease;
+}
 /*Logo main page*/
 .logo_main
 {
@@ -120,6 +130,7 @@ body
         height: 380px;
     }
 }
+
 .reserv_title
 {
     margin: 0% auto;
@@ -143,9 +154,7 @@ body
 /*Fonctionnement*/
 .fonctionnement_main
 {
-    width:95%;
-    margin: 10px auto;
-    font-family: $main-font;
+    @include layout
 }
 .fonctionnement_body
 {
@@ -241,6 +250,122 @@ body
         top: 1px;
     }
 }
+/*Restaurants*/
+.restaurants_main
+{
+    width: 100%;
+    background-color: #f2f2f2;
+}
+.restaurants_main h2
+{
+    display: block;
+    width: 95%;
+    font-family: $main-font;
+    padding-top: 15px;
+    margin-left: 2.5%;
+}
+.restaurants_body
+{
+    @include layout;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media screen and (max-width:480px)
+    {
+        flex-direction: column;
+    }
+}
+.restaurant_unit
+{
+    width: 20%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-bottom: 20px;
+}
+.resto_photo
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    z-index: 1;
+}
+.resto_photo:hover
+{
+    opacity:0.9;
+}
+.green
+{
+    width: 60px;
+    height: 30px;
+    background-color: $tertiary-color;
+    color: green;
+    line-height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    top: 15px;
+    left: 70%;
+}
+.restaurants_link
+{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    background-color: white;
+    border-radius:0 0 24px 24px;
+    bottom: 0px;
+    display: block;
+}
+.rest_link_text1
+{
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    display: block;
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    width: 100%;
+    font-weight: bolder;
+}
+.rest_link_text2
+{   top: 30px;
+    position: absolute;
+    left: 15px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+.fa-heart
+{
+    font-size: 25px;
+    position: absolute;
+    top:5px;
+    right: 15px;
+    display: inline;
+    color: black;
+    z-index: 3;
+}
+
+#heart1
+{
+    color: white;
+    font-size: 25px;
+    z-index: 2;
+}
+/*
+.fa-heart:hover
+{
+    @include heart;
+    color: $secondary-color;
+    cursor: pointer;
+    z-index: 5;
+}*/
 
 
 
