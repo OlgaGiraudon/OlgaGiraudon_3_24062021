@@ -164,9 +164,13 @@ body {
   }
 }
 
+.fonctionnement_main h2 {
+  width: 97%;
+}
+
 @media screen and (max-width: 1024px) {
   .fonctionnement_main h2 {
-    margin-left: 15px;
+    margin-left: 7px;
   }
 }
 
@@ -201,7 +205,7 @@ body {
 @media screen and (max-width: 480px) {
   .choose {
     margin-left: 20px;
-    width: 91%;
+    width: 90%;
   }
 }
 
@@ -272,6 +276,12 @@ body {
   margin-left: 2.5%;
 }
 
+@media screen and (max-width: 480px) {
+  .restaurants_main h2 {
+    margin-left: 23px;
+  }
+}
+
 .restaurants_body {
   width: 95%;
   margin: 10px auto;
@@ -285,12 +295,15 @@ body {
 @media screen and (max-width: 480px) {
   .restaurants_body {
     flex-direction: column;
+    margin-left: 25px;
+    width: 90%;
   }
 }
 
 .restaurant_unit {
   width: 20%;
   min-width: 300px;
+  max-height: 300px;
   border-radius: 20px;
   display: flex;
   flex-direction: row;
@@ -300,7 +313,9 @@ body {
 
 @media screen and (max-width: 480px) {
   .restaurant_unit {
-    width: 99%;
+    width: 98%;
+    min-width: 50px;
+    height: 200px;
   }
 }
 
@@ -309,6 +324,7 @@ body {
   height: 100%;
   border-radius: 25px;
   z-index: 1;
+  object-fit: cover;
 }
 
 .resto_photo:hover {
@@ -334,6 +350,7 @@ body {
   }
 }
 
+/*White field*/
 .restaurants_link {
   width: 100%;
   height: 60px;
@@ -367,20 +384,36 @@ body {
   color: black;
 }
 
-.fa-heart {
+/*Heart */
+.heart_invisible {
   font-size: 25px;
   position: absolute;
   top: 5px;
   right: 15px;
-  display: inline;
-  color: black;
   z-index: 3;
 }
 
-#heart1 {
-  color: white;
+.heart_transition {
   font-size: 25px;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  opacity: 0;
   z-index: 2;
+  transition: color 0.5s ease;
+}
+
+.heart_transition:hover {
+  color: #9356DC;
+  color: #FF79DA;
+  mix-blend-mode: normal;
+  opacity: 1;
+  z-index: 4;
+}
+
+.heart_invisible:hover {
+  z-index: 1;
+  opacity: 0;
 }
 
 /*Footer*/
@@ -399,7 +432,7 @@ footer {
 
 @media screen and (max-width: 480px) {
   .footer_list {
-    margin-left: 15px;
+    margin-left: 25px;
     padding-left: 0%;
   }
 }
