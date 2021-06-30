@@ -290,11 +290,18 @@ body {
 
 .restaurant_unit {
   width: 20%;
+  min-width: 300px;
   border-radius: 20px;
   display: flex;
   flex-direction: row;
   position: relative;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .restaurant_unit {
+    width: 99%;
+  }
 }
 
 .resto_photo {
@@ -319,6 +326,12 @@ body {
   position: absolute;
   top: 15px;
   left: 70%;
+}
+
+@media screen and (max-width: 480px) {
+  .green {
+    left: 77%;
+  }
 }
 
 .restaurants_link {
@@ -381,7 +394,14 @@ footer {
 .footer_list {
   list-style-type: none;
   font-family: "Roboto", sans-serif;
-  margin-left: 20px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .footer_list {
+    margin-left: 15px;
+    padding-left: 0%;
+  }
 }
 
 .footer_list li {
