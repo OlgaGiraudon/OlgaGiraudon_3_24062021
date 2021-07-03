@@ -1,79 +1,8 @@
 @import "./utils/variables";
+@import "./utils/mixins";
 body
 {
     margin: 0;
-}
-/*mixin Logo*/
-@mixin logo
-{
-    font-family: $logo-font;
-    font-size: 1em;
-    line-height: 70px;
-    height: 70px;
-    text-align: center;
-    width: 100%;
-}
-/*mixin Réservez le menu*/
-@mixin reserv
-{
-    width: 60%;
-    flex-wrap: wrap;
-    font-family: $main-font;
-    text-align: center;
-}
-/*mixin button*/
-@mixin button
-{
-    width: 230px;
-    height: 45px;
-    border-radius: 25px;
-    background: linear-gradient(to top left, $primary-color, $secondary-color);
-    color: white;
-    font-family: $main-font;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    border: none;
-    box-shadow: 2px 1px 7px grey;
-    transition: background-color 0.5s ease, box-shadow 0.5s ease;
-}
-@mixin layout
-{
-    width:95%;
-    margin: 10px auto;
-    font-family: $main-font;
-}
-@mixin heart
-{   font-size: 25px;
-    position: absolute;
-    top:5px;
-    right: 15px;
-    
-}
-@mixin footer
-{
-    width: 100%;
-    height: 200px;
-    background-color: #353535;
-    color: white;
-}
-@mixin footer_list
-{
-    list-style-type: none;
-    font-family: $main-font;
-    margin-left: 10px;
-
-}
-@mixin footer_link
-{
-    color: white;
-    text-decoration: none;
-}
-@mixin footer_title
-{
-    font-family: $logo-font;
-    font-size: 22px;
-    padding-top:10px;
 }
 /*Logo main page*/
 .logo_main
@@ -81,32 +10,10 @@ body
     @include logo;
     box-shadow: 0px 0px 5px rgb(153, 153, 153);
 }
-.logo_main h1, .logo_arrow h1
+.logo_main h1
 {
     margin: 0;
 }
-/*Logo another pages*/
-.logo_second
-{
-    display: flex;
-    flex-direction: row;
-}
-.logo_arrow
-{
-    position: relative;
-    @include logo;
-}
-
-.link_arrow:active, .logo_arrow:visited
-{
-    color: black;
-    position: absolute;
-}
-.link_arrow:hover
-{
-    color: black;
-}
-
 /*Geolocalisation*/
 .geo
 {
@@ -199,7 +106,6 @@ body
     @media screen and (max-width:1024px)
     {
         margin-left: 7px;
-        
     }
     @media screen and (max-width:480px)
     {
@@ -239,6 +145,12 @@ body
 .choose:hover
 {
     background-color: lighten($primary-color,30);
+
+}
+.choose:hover i
+{
+    color: $primary-color;
+
 }
 
 .violet_number
@@ -261,6 +173,10 @@ body
     top: 23px;
     font-size: 20px;
     color: grey;
+}
+.fonctionnement_icone:hover
+{
+    color: $primary-color
 }
 .fonctionnement_texte
 {
@@ -396,18 +312,20 @@ body
 .heart_invisible
 {   @include heart;
     z-index: 3;
-    
+    top:5px;
+    right: 15px;
 }
-
 .heart_transition
 {
     @include heart;
     opacity: 0;
     z-index: 2;
     transition: color 0.5s ease;
+    top:5px;
+    right: 15px;
 }
 .heart_transition:hover
-{
+{       
     color: $primary-color;
     color: $secondary-color;
     mix-blend-mode: normal;
@@ -419,8 +337,6 @@ body
     z-index: 1;
     opacity: 0;
 }
-
-
 /*Footer*/
 footer
 {
@@ -451,5 +367,7 @@ footer
 {
     @include footer_title;
 }
+
+
 
 

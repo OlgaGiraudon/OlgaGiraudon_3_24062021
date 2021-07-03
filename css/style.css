@@ -1,11 +1,11 @@
 @charset "UTF-8";
+/*mixin Logo*/
+/*mixin Réservez le menu*/
+/*mixin button*/
 body {
   margin: 0;
 }
 
-/*mixin Logo*/
-/*mixin Réservez le menu*/
-/*mixin button*/
 /*Logo main page*/
 .logo_main {
   font-family: "Shrikhand", cursive;
@@ -17,33 +17,8 @@ body {
   box-shadow: 0px 0px 5px #999999;
 }
 
-.logo_main h1, .logo_arrow h1 {
+.logo_main h1 {
   margin: 0;
-}
-
-/*Logo another pages*/
-.logo_second {
-  display: flex;
-  flex-direction: row;
-}
-
-.logo_arrow {
-  position: relative;
-  font-family: "Shrikhand", cursive;
-  font-size: 1em;
-  line-height: 70px;
-  height: 70px;
-  text-align: center;
-  width: 100%;
-}
-
-.link_arrow:active, .logo_arrow:visited {
-  color: black;
-  position: absolute;
-}
-
-.link_arrow:hover {
-  color: black;
 }
 
 /*Geolocalisation*/
@@ -219,6 +194,10 @@ body {
   background-color: #e4d5f6;
 }
 
+.choose:hover i {
+  color: #9356DC;
+}
+
 .violet_number {
   width: 25px;
   height: 25px;
@@ -239,6 +218,10 @@ body {
   top: 23px;
   font-size: 20px;
   color: grey;
+}
+
+.fonctionnement_icone:hover {
+  color: #9356DC;
 }
 
 .fonctionnement_texte {
@@ -388,19 +371,19 @@ body {
 .heart_invisible {
   font-size: 25px;
   position: absolute;
+  z-index: 3;
   top: 5px;
   right: 15px;
-  z-index: 3;
 }
 
 .heart_transition {
   font-size: 25px;
   position: absolute;
-  top: 5px;
-  right: 15px;
   opacity: 0;
   z-index: 2;
   transition: color 0.5s ease;
+  top: 5px;
+  right: 15px;
 }
 
 .heart_transition:hover {
