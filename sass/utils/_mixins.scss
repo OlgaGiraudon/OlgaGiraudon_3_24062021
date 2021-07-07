@@ -53,7 +53,11 @@
 {
     list-style-type: none;
     font-family: $main-font;
-    margin-left: 10px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    padding: 0;
 
 }
 @mixin footer_link
@@ -65,5 +69,4 @@
 {
     font-family: $logo-font;
     font-size: 22px;
-    padding-top:10px;
 }
