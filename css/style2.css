@@ -26,7 +26,7 @@ body {
 .link_arrow {
   z-index: 2;
   top: 25px;
-  left: 30px;
+  left: 20px;
   position: absolute;
   color: black;
 }
@@ -84,7 +84,7 @@ body {
   background-color: #f2f2f2;
   width: 80%;
   margin: -50px auto 0 auto;
-  border-radius: 25px;
+  border-radius: 25px 25px 0 0;
   height: 600px;
   z-index: 3;
   position: relative;
@@ -150,6 +150,18 @@ body {
   right: 3%;
 }
 
+@media screen and (max-width: 1024px) {
+  .heart_invisible {
+    right: 8%;
+  }
+}
+
+@media screen and (max-width: 240px) {
+  .heart_invisible {
+    right: 3%;
+  }
+}
+
 .heart_transition {
   font-size: 25px;
   position: absolute;
@@ -158,6 +170,18 @@ body {
   transition: color 0.7s ease;
   top: 20px;
   right: 3%;
+}
+
+@media screen and (max-width: 1024px) {
+  .heart_transition {
+    right: 8%;
+  }
+}
+
+@media screen and (max-width: 240px) {
+  .heart_transition {
+    right: 3%;
+  }
 }
 
 .heart_transition:hover {
@@ -250,6 +274,7 @@ body {
   position: relative;
   height: 19%;
   max-height: 75px;
+  cursor: pointer;
   animation: anim_menu_white 1s ease;
 }
 
@@ -269,6 +294,18 @@ body {
   animation: anim_menu_white 1s ease;
 }
 
+@media screen and (max-width: 320px) {
+  .menu_white h3 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .menu_white h3 {
+    font-size: 13px;
+  }
+}
+
 .menu_white .plate_description {
   font-family: "Roboto", sans-serif;
   font-size: 17px;
@@ -285,6 +322,18 @@ body {
   animation: anim_menu_white 1s ease;
 }
 
+@media screen and (max-width: 320px) {
+  .menu_white .plate_description {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .menu_white .plate_description {
+    font-size: 13px;
+  }
+}
+
 .menu_white .price {
   font-family: "Roboto", sans-serif;
   font-size: 17px;
@@ -293,6 +342,19 @@ body {
   position: absolute;
   font-weight: 500;
   animation: anim_menu_white 1s ease;
+}
+
+@media screen and (max-width: 320px) {
+  .menu_white .price {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .menu_white .price {
+    font-size: 13px;
+    right: 10px;
+  }
 }
 
 .button_rose {
@@ -321,6 +383,12 @@ body {
   box-shadow: 3px 3px 10px #747373;
 }
 
+@media screen and (max-width: 1024px) {
+  .button_rose {
+    margin-top: 30px;
+  }
+}
+
 /*Footer*/
 footer {
   width: 100%;
@@ -337,19 +405,25 @@ footer {
   margin-right: auto;
   margin-top: 0;
   padding: 0;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 15px;
+  width: 80%;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1024px) {
   .footer_list {
-    margin-left: 25px;
-    padding-left: 0%;
+    width: 90%;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .footer_list {
+    margin-left: 8px;
   }
 }
 
 .footer_list li {
+  width: 100%;
   margin-bottom: 10px;
 }
 

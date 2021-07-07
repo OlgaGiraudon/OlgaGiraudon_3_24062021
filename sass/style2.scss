@@ -20,7 +20,7 @@ body
 {
     z-index:2;
     top: 25px;
-    left: 30px;
+    left: 20px;
     position: absolute;
     color: black;
 }
@@ -71,7 +71,7 @@ body
     background-color: #f2f2f2;
     width: 80%;
     margin: -50px auto 0 auto;
-    border-radius: 25px;
+    border-radius: 25px 25px 0 0;
     height: 600px;
     z-index: 3;
     position: relative;
@@ -120,6 +120,12 @@ body
     z-index: 3;
     top:20px;
     right: 3%;
+    @media screen and(max-width:1024px) {
+        right: 8%;
+    }
+    @media screen and(max-width:240px) {
+        right: 3%;
+    }
 }
 .heart_transition
 {
@@ -129,6 +135,12 @@ body
     transition: color 0.7s ease;
     top:20px;
     right: 3%;
+    @media screen and(max-width:1024px) {
+        right: 8%;
+    }
+    @media screen and(max-width:240px) {
+        right: 3%;
+    }
     
 }
 .heart_transition:hover
@@ -151,7 +163,6 @@ body
     font-size: 20px;
     font-family: $main-font;
     margin-bottom: 5px;
-    
 }
 .line_green
 {
@@ -208,6 +219,7 @@ body
     position: relative;
     height:19%;
     max-height: 75px;
+    cursor: pointer;
     animation:anim_menu_white 1s ease;
     & h3
     {
@@ -224,6 +236,12 @@ body
         flex:1;
         width: 70%;
         animation:anim_menu_white 1s ease;
+       @media screen and(max-width:320px) {
+            font-size: 15px;
+       }
+       @media screen and(max-width:250px) {
+        font-size: 13px;
+        }
     }
     & .plate_description
     {
@@ -240,6 +258,12 @@ body
         flex:1;
         width: 80%;
         animation:anim_menu_white 1s ease;
+        @media screen and(max-width:320px) {
+            font-size: 15px;
+        }
+        @media screen and(max-width:250px) {
+            font-size: 13px;
+            }
     }
     & .price
     {
@@ -250,6 +274,13 @@ body
         position: absolute;
         font-weight: 500;
         animation:anim_menu_white 1s ease;
+         @media screen and(max-width:320px) {
+            font-size: 15px;
+        }
+        @media screen and(max-width:250px) {
+            font-size: 13px;
+            right: 10px;
+            }
     }
 }
 .button_rose
@@ -265,27 +296,32 @@ body
             background: linear-gradient(to top left, #df96ca, #FF79DA);
             box-shadow: 3px 3px 10px #747373;
     }
+    @media screen and (max-width:1024px)
+    {
+       margin-top: 30px;
+    }
 }
 /*Footer*/
 footer
 {
     @include footer;
-    
 }
 .footer_list
 {
     @include footer_list;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    @media screen and (max-width:480px)
-    {
-        margin-left: 25px;
-        padding-left: 0%;
+    padding-top: 15px;
+    width:80%;
+    @media screen and(max-width:1024px) {
+        width: 90%;
+        margin-left: 20px;
+        
+    }
+    @media screen and(max-width:310px) {
+        margin-left: 8px;
     }
 }
 .footer_list  li
-{
+{   width: 100%;
     margin-bottom: 10px;
 }
 .footer_list a
@@ -300,5 +336,3 @@ footer
 {
     @include footer_title;
 }
-
-
