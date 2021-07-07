@@ -275,6 +275,7 @@ body {
   height: 19%;
   max-height: 75px;
   cursor: pointer;
+  overflow: hidden;
   animation: anim_menu_white 1s ease;
 }
 
@@ -439,4 +440,58 @@ footer {
 .footer_title {
   font-family: "Shrikhand", cursive;
   font-size: 22px;
+}
+
+/*Animation green div*/
+.green_anim {
+  display: none;
+  position: absolute;
+  height: 100%;
+  border-radius: 0 23px 23px 0;
+  width: 15%;
+  background-color: #99E2D0;
+  left: 100%;
+}
+
+.green_anim i {
+  display: none;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  font-size: 22px;
+}
+
+.menu_white:hover {
+  position: relative;
+}
+
+.menu_white:hover .green_anim {
+  display: block;
+  animation: anim_green_block 1s ease;
+  animation-fill-mode: forwards;
+}
+
+.menu_white:hover i {
+  display: block;
+  animation: anim_check 1s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes anim_green_block {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(-100%);
+  }
+}
+
+@keyframes anim_check {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(365deg);
+  }
 }
