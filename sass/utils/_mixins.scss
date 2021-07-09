@@ -38,8 +38,9 @@
     margin: 10px auto;
     font-family: $main-font;
 }
-@mixin heart
-{   font-size: 25px;
+@mixin heart_block
+{   width: 25px;
+    height: 25px;
     position: absolute;
 }
 @mixin footer

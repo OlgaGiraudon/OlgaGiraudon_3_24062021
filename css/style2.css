@@ -141,60 +141,49 @@ body {
   }
 }
 
-/*Heart*/
-.heart_invisible {
-  font-size: 25px;
+/*Heart */
+.heart {
+  width: 25px;
+  height: 25px;
   position: absolute;
-  z-index: 3;
   top: 20px;
   right: 3%;
 }
 
 @media screen and (max-width: 1024px) {
-  .heart_invisible {
+  .heart {
     right: 8%;
   }
 }
 
 @media screen and (max-width: 240px) {
-  .heart_invisible {
+  .heart {
     right: 3%;
   }
+}
+
+.heart i {
+  position: inherit;
+  font-size: 25px;
+}
+
+.heart:hover .heart_invisible {
+  opacity: 0;
 }
 
 .heart_transition {
-  font-size: 25px;
-  position: absolute;
+  display: block;
+  color: transparent;
+  background: linear-gradient(to right top, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
   opacity: 0;
-  z-index: 2;
-  transition: color 0.7s ease;
-  top: 20px;
-  right: 3%;
+  transition: opacity, 0.5s ease-in;
 }
 
-@media screen and (max-width: 1024px) {
-  .heart_transition {
-    right: 8%;
-  }
-}
-
-@media screen and (max-width: 240px) {
-  .heart_transition {
-    right: 3%;
-  }
-}
-
-.heart_transition:hover {
-  color: #9356DC;
-  color: #FF79DA;
-  mix-blend-mode: normal;
+.heart:hover .heart_transition {
   opacity: 1;
-  z-index: 4;
-}
-
-.heart_invisible:hover {
-  z-index: 1;
-  opacity: 0;
+  cursor: pointer;
 }
 
 /*Sous-title souligné*/

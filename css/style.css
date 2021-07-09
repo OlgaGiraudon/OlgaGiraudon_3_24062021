@@ -39,16 +39,17 @@ body {
 }
 
 .loader {
+  /*position: absolute;*/
   margin-left: auto;
   margin-right: auto;
-  margin-top: 350px;
+  margin-top: 25rem;
   border: 10px solid white;
   border-top: 10px solid #9356DC;
   border-bottom: 10px solid #FF79DA;
-  border-radius: 50px;
+  border-radius: 150px;
   height: 60px;
   width: 60px;
-  animation: loader_anim 2s ease-in-out;
+  animation: loader_anim 2s ease-out;
 }
 
 @keyframes loader_anim {
@@ -430,38 +431,36 @@ body {
 }
 
 /*Heart */
-.heart_invisible {
-  font-size: 25px;
+.heart {
+  width: 25px;
+  height: 25px;
   position: absolute;
-  z-index: 3;
-  top: 5px;
+  top: 10px;
   right: 15px;
+}
+
+.heart i {
+  position: inherit;
+  font-size: 25px;
+}
+
+.heart:hover .heart_invisible {
+  opacity: 0;
 }
 
 .heart_transition {
-  font-size: 25px;
-  position: absolute;
-  opacity: 0;
-  z-index: 2;
-  transition: all 0.7s ease-out;
-  top: 5px;
-  right: 15px;
-  color: transparent;
-}
-
-.heart_transition:hover {
-  opacity: 1;
-  z-index: 4;
-  background: linear-gradient(to top, #9356DC, #FF79DA);
-  background-clip: text;
   display: block;
+  color: transparent;
+  background: linear-gradient(to right top, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+  transition: opacity, 0.5s ease;
 }
 
-.heart_invisible:hover {
-  z-index: 1;
-  opacity: 0;
-  color: transparent;
-  font-size: 10px;
+.heart:hover .heart_transition {
+  opacity: 1;
+  cursor: pointer;
 }
 
 /*Footer*/

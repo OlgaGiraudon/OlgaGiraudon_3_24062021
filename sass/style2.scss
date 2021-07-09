@@ -113,10 +113,10 @@ body
         font-size: 20px;
     }
 }
-/*Heart*/
-.heart_invisible
-{   @include heart;
-    z-index: 3;
+/*Heart */
+.heart
+{
+    @include heart_block;
     top:20px;
     right: 3%;
     @media screen and(max-width:1024px) {
@@ -126,34 +126,26 @@ body
         right: 3%;
     }
 }
-.heart_transition
+.heart i
 {
-    @include heart;
+    position: inherit;
+    font-size: 25px
+}
+.heart:hover .heart_invisible{
     opacity: 0;
-    z-index: 2;
-    transition: color 0.7s ease;
-    top:20px;
-    right: 3%;
-    @media screen and(max-width:1024px) {
-        right: 8%;
-    }
-    @media screen and(max-width:240px) {
-        right: 3%;
-    }
-    
 }
-.heart_transition:hover
-{
-    color: $primary-color;
-    color: $secondary-color;
-    mix-blend-mode: normal;
+.heart_transition{
+    display: block;
+    color:transparent;
+    background: linear-gradient(to right top, $secondary-color, $primary-color);
+    -webkit-background-clip: text;
+    background-clip:text;
+    opacity: 0;
+    transition: opacity, 0.5s ease-in;
+}
+.heart:hover .heart_transition{
     opacity: 1;
-    z-index: 4;
-}
-.heart_invisible:hover
-{
-    z-index: 1;
-    opacity: 0;
+    cursor: pointer;
 }
 /*Sous-title souligné*/
 .title_majuscule
