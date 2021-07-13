@@ -32,17 +32,30 @@
     box-shadow: 2px 1px 7px grey;
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
+/*mixin partie restaurants*/
 @mixin layout
 {
     width:95%;
     margin: 10px auto;
     font-family: $main-font;
 }
+/*mixin coeur transition*/
 @mixin heart_block
 {   width: 25px;
     height: 25px;
     position: absolute;
 }
+@mixin heart_transition
+{
+    display: block;
+    color:transparent;
+    background: linear-gradient(to right top, $secondary-color, $primary-color);
+    -webkit-background-clip: text;
+    background-clip:text;
+    opacity: 0;
+    transition: opacity, 0.2s ease;
+}
+/*Footer*/
 @mixin footer
 {
     width: 100%;
