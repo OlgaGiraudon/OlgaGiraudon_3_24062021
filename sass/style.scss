@@ -374,6 +374,10 @@ body
     opacity: 1;
     cursor: pointer;
 }
+.heart_invisible{
+    transition: opacity, 1s ease-out 0.1s;
+}
+
 /*Footer*/
 footer
 {

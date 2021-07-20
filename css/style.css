@@ -453,12 +453,16 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   opacity: 0;
-  transition: opacity, 0.2s ease;
+  transition: opacity, 1s ease-out 0.1s;
 }
 
 .heart:hover .heart_transition {
   opacity: 1;
   cursor: pointer;
+}
+
+.heart_invisible {
+  transition: opacity, 1s ease-out 0.1s;
 }
 
 /*Footer*/
